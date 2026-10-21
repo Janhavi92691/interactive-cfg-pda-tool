@@ -328,10 +328,160 @@ code, pre {
     font-weight: 700;
 }
 
-/* Sidebar Custom Styling */
-section[data-testid="stSidebar"] {
-    background-color: #f8fafc;
-    border-right: 1px solid #e2e8f0;
+/* Sidebar Dark-Slate Theme & High Contrast */
+section[data-testid="stSidebar"],
+section[data-testid="stSidebar"] > div,
+section[data-testid="stSidebar"] [data-testid="stSidebarContent"],
+section[data-testid="stSidebar"] [data-testid="stSidebarUserContent"] {
+    background-color: #0b0f19 !important;
+    background: #0b0f19 !important;
+    color: #f8fafc !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Sidebar Headings, Paragraphs, Spans & Labels */
+section[data-testid="stSidebar"] p,
+section[data-testid="stSidebar"] span,
+section[data-testid="stSidebar"] label,
+section[data-testid="stSidebar"] div[data-testid="stMarkdownContainer"] p {
+    color: #e2e8f0 !important;
+}
+
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3 {
+    color: #ffffff !important;
+}
+
+/* Sidebar Radio Navigation */
+section[data-testid="stSidebar"] div[data-testid="stRadio"] > label {
+    color: #818cf8 !important;
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    margin-bottom: 8px !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stRadio"] div[role="radiogroup"] {
+    gap: 4px !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stRadio"] div[role="radiogroup"] label {
+    background-color: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 8px !important;
+    padding: 7px 12px !important;
+    margin: 0 !important;
+    transition: all 0.15s ease-in-out !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stRadio"] div[role="radiogroup"] label:hover {
+    background-color: rgba(99, 102, 241, 0.2) !important;
+    border-color: rgba(129, 140, 248, 0.4) !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stRadio"] div[role="radiogroup"] label p {
+    color: #cbd5e1 !important;
+    font-size: 0.88rem !important;
+    font-weight: 500 !important;
+    margin: 0 !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stRadio"] div[role="radiogroup"] label:hover p {
+    color: #ffffff !important;
+}
+
+/* Active Selected Radio Item */
+section[data-testid="stSidebar"] div[data-testid="stRadio"] div[role="radiogroup"] label:has(input:checked) {
+    background: linear-gradient(135deg, #4338ca 0%, #4f46e5 100%) !important;
+    border-color: #818cf8 !important;
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.35) !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stRadio"] div[role="radiogroup"] label:has(input:checked) p {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+/* Radio button circle indicator */
+section[data-testid="stSidebar"] div[data-testid="stRadio"] div[role="radiogroup"] label input + div {
+    border-color: #64748b !important;
+}
+
+section[data-testid="stSidebar"] div[data-testid="stRadio"] div[role="radiogroup"] label:has(input:checked) input + div {
+    border-color: #ffffff !important;
+    background-color: #ffffff !important;
+}
+
+/* Sidebar Selectbox */
+section[data-testid="stSidebar"] div[data-testid="stSelectbox"] label p {
+    color: #818cf8 !important;
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+}
+
+section[data-testid="stSidebar"] div[data-baseweb="select"] {
+    background-color: #1e293b !important;
+    border: 1px solid #334155 !important;
+    border-radius: 8px !important;
+}
+
+section[data-testid="stSidebar"] div[data-baseweb="select"] * {
+    color: #f8fafc !important;
+    background-color: transparent !important;
+}
+
+section[data-testid="stSidebar"] div[data-baseweb="select"] svg {
+    fill: #cbd5e1 !important;
+}
+
+/* Dropdown Menu Popup */
+ul[data-baseweb="menu"] {
+    background-color: #1e293b !important;
+    border: 1px solid #334155 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+}
+
+ul[data-baseweb="menu"] li {
+    color: #f8fafc !important;
+    font-size: 0.88rem !important;
+    padding: 8px 12px !important;
+}
+
+ul[data-baseweb="menu"] li:hover,
+ul[data-baseweb="menu"] li[aria-selected="true"] {
+    background-color: #334155 !important;
+    color: #818cf8 !important;
+}
+
+/* Sidebar Divider & Captions */
+section[data-testid="stSidebar"] hr {
+    border: none !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    margin: 16px 0 !important;
+}
+
+section[data-testid="stSidebar"] [data-testid="stCaptionContainer"] p {
+    color: #94a3b8 !important;
+    font-size: 0.78rem !important;
+    text-align: center !important;
+}
+
+/* Sidebar Collapse / Expand button */
+button[data-testid="stSidebarCollapseButton"] {
+    color: #cbd5e1 !important;
+}
+
+button[data-testid="stSidebarCollapseButton"]:hover {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
 }
 </style>
 """
@@ -373,8 +523,8 @@ def init_session_state():
 def render_sidebar_grammar_selector():
     """Render sleek grammar controller in the sidebar."""
     st.sidebar.markdown("""
-    <div style="padding: 10px 0 6px 0;">
-        <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #64748b;">
+    <div style="padding: 6px 0 4px 0;">
+        <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #818cf8;">
             Active Grammar Context
         </span>
     </div>
@@ -402,16 +552,17 @@ def render_sidebar_grammar_selector():
     # Active grammar summary card in sidebar
     g: CFG = st.session_state.current_grammar
     st.sidebar.markdown(f"""
-    <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:10px; padding:10px 12px; margin-top:8px;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
-            <span style="font-size:0.75rem; color:#64748b; font-weight:600;">Start Symbol</span>
-            <span class="badge-tag badge-start" style="margin:0;">{g.start_symbol}</span>
+    <div style="background: #1e293b; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 10px 12px; margin-top: 8px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 600;">Start Symbol</span>
+            <span class="badge-tag badge-start" style="margin: 0; background: #fbbf24; color: #78350f; font-weight: 700;">{g.start_symbol}</span>
         </div>
-        <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.75rem; color:#64748b;">
-            <span>Variables: <b>{len(g.variables)}</b></span>
-            <span>Terminals: <b>{len(g.terminals)}</b></span>
-            <span>Rules: <b>{len(g.productions)}</b></span>
+        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: #cbd5e1;">
+            <span>Variables: <b style="color: #ffffff;">{len(g.variables)}</b></span>
+            <span>Terminals: <b style="color: #ffffff;">{len(g.terminals)}</b></span>
+            <span>Rules: <b style="color: #ffffff;">{len(g.productions)}</b></span>
         </div>
     </div>
     """, unsafe_allow_html=True)
     st.sidebar.divider()
+

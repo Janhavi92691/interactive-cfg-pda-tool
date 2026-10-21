@@ -31,11 +31,11 @@ init_session_state()
 
 # Sidebar Navigation
 st.sidebar.markdown("""
-<div style="text-align: center; margin-bottom: 15px;">
-    <h2 style="margin: 0; font-size: 1.35rem; font-weight: 800; color: #0f172a;">🎓 CFG & PDA Explorer</h2>
-    <div style="font-size: 0.78rem; color: #64748b; margin-top: 2px;">Theory of Computation Workbench</div>
-    <div style="margin-top: 6px;">
-        <span class="badge-tag badge-var" style="font-size: 0.72rem; padding: 2px 8px; margin: 0;">v1.0 &bull; Janhavi92691</span>
+<div style="text-align: center; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+    <h2 style="margin: 0; font-size: 1.35rem; font-weight: 800; color: #ffffff; letter-spacing: -0.01em;">🎓 CFG & PDA Explorer</h2>
+    <div style="font-size: 0.78rem; color: #94a3b8; margin-top: 4px; font-weight: 500;">Theory of Computation Workbench</div>
+    <div style="margin-top: 8px;">
+        <span class="badge-tag badge-var" style="font-size: 0.72rem; padding: 3px 10px; margin: 0; background: rgba(99, 102, 241, 0.25); color: #c7d2fe; border: 1px solid rgba(129, 140, 248, 0.4);">v1.0 &bull; Janhavi92691</span>
     </div>
 </div>
 """, unsafe_allow_html=True)
