@@ -50,15 +50,15 @@ def render_pda_page():
         t1, t2, t3 = st.columns(3)
         with t1:
             st.write(f"**States ($Q$):** {', '.join(sorted(active_pda.states))}")
-            st.write(f"**Input Alphabet ($\Sigma$):** {', '.join(sorted(active_pda.input_alphabet))}")
+            st.write(rf"**Input Alphabet ($\Sigma$):** {', '.join(sorted(active_pda.input_alphabet))}")
         with t2:
-            st.write(f"**Stack Alphabet ($\Gamma$):** {', '.join(sorted(active_pda.stack_alphabet))}")
+            st.write(rf"**Stack Alphabet ($\Gamma$):** {', '.join(sorted(active_pda.stack_alphabet))}")
             st.write(f"**Accepting States ($F$):** {', '.join(sorted(active_pda.accepting_states))}")
         with t3:
             st.write(f"**Start State ($q_0$):** `{active_pda.start_state}`")
             st.write(f"**Initial Stack ($Z_0$):** `{active_pda.initial_stack_symbol}`")
 
-        st.markdown("**Transition Function ($\delta$):**")
+        st.markdown(r"**Transition Function ($\delta$):**")
         trans_rows = []
         for t in active_pda.transitions:
             trans_rows.append({

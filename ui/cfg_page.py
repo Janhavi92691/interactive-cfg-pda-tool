@@ -99,7 +99,7 @@ def render_cfg_page():
                 v_html = " ".join([f"<span class='badge-tag badge-var'>{v}</span>" for v in sorted(g.variables)])
                 st.markdown(v_html, unsafe_allow_html=True)
             with col_t:
-                st.write("**Terminal Symbols ($\Sigma$):**")
+                st.write(r"**Terminal Symbols ($\Sigma$):**")
                 t_html = " ".join([f"<span class='badge-tag badge-term'>{t}</span>" for t in sorted(g.terminals)])
                 st.markdown(t_html, unsafe_allow_html=True)
 
