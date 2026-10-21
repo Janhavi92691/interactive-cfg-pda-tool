@@ -58,11 +58,19 @@ PAGES = [
     "11. About Project"
 ]
 
+if "nav_page" not in st.session_state or st.session_state.nav_page not in PAGES:
+    st.session_state.nav_page = "1. Home"
+
+curr_idx = PAGES.index(st.session_state.nav_page)
+
 selected_page = st.sidebar.radio(
     "Navigation Menu:",
     options=PAGES,
-    index=0
+    index=curr_idx,
+    key=f"nav_radio_{st.session_state.nav_page}"
 )
+
+st.session_state.nav_page = selected_page
 
 st.sidebar.divider()
 st.sidebar.caption("Interactive CFG & PDA Learning Tool &bull; Academic Edition")

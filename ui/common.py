@@ -479,9 +479,71 @@ button[data-testid="stSidebarCollapseButton"] {
     color: #cbd5e1 !important;
 }
 
-button[data-testid="stSidebarCollapseButton"]:hover {
-    color: #ffffff !important;
-    background-color: rgba(255, 255, 255, 0.1) !important;
+/* =========================================================
+   Main Area Form Controls & Inputs (Ensure High Contrast)
+   ========================================================= */
+section.main input[type="text"],
+section.main textarea,
+section.main input[type="number"],
+section.main div[data-baseweb="input"],
+section.main div[data-baseweb="input"] input,
+section.main div[data-baseweb="base-input"],
+section.main div[data-baseweb="base-input"] input,
+section.main div[data-baseweb="textarea"],
+section.main div[data-baseweb="textarea"] textarea,
+section.main div[data-testid="stTextInput"] input,
+section.main div[data-testid="stTextArea"] textarea {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: 1.5px solid #cbd5e1 !important;
+    border-radius: 8px !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+    -webkit-text-fill-color: #0f172a !important;
+}
+
+section.main input[type="text"]:focus,
+section.main textarea:focus,
+section.main div[data-baseweb="input"]:focus-within,
+section.main div[data-baseweb="base-input"]:focus-within,
+section.main div[data-baseweb="textarea"]:focus-within {
+    border-color: #4f46e5 !important;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.18) !important;
+    outline: none !important;
+}
+
+section.main input::placeholder,
+section.main textarea::placeholder {
+    color: #94a3b8 !important;
+    -webkit-text-fill-color: #94a3b8 !important;
+    opacity: 1 !important;
+}
+
+section.main label[data-testid="stWidgetLabel"] p {
+    color: #1e293b !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+}
+
+/* Main Area Selectbox */
+section.main div[data-testid="stSelectbox"] div[data-baseweb="select"] > div {
+    background-color: #ffffff !important;
+    border: 1.5px solid #cbd5e1 !important;
+    border-radius: 8px !important;
+    color: #0f172a !important;
+}
+
+section.main div[data-testid="stSelectbox"] div[data-baseweb="select"] * {
+    color: #0f172a !important;
+}
+
+/* Hide confusing Streamlit automatic header anchor link icons */
+a.anchor-link,
+[data-testid="stHeaderActionElements"],
+[data-testid="stHeadingWithActionElements"] a,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    display: none !important;
 }
 </style>
 """

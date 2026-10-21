@@ -80,13 +80,16 @@ def render_home_page():
                     Define custom or predefined grammars. Validate productive and reachable variables, and generate step-by-step leftmost and rightmost sentential derivations.
                 </p>
             </div>
-            <div style="margin-top:14px;">
+            <div style="margin-top:14px; margin-bottom:12px;">
                 <span class="badge-tag badge-var">Leftmost (LM)</span>
                 <span class="badge-tag badge-var">Rightmost (RM)</span>
                 <span class="badge-tag badge-pill">Multi-Char 'id'</span>
             </div>
         </div>
         """, unsafe_allow_html=True)
+        if st.button("🚀 Open CFG Explorer →", key="home_nav_cfg", use_container_width=True):
+            st.session_state.nav_page = "2. CFG Explorer"
+            st.rerun()
 
         st.markdown("<br>", unsafe_allow_html=True)
 
@@ -99,13 +102,16 @@ def render_home_page():
                     Complete 6-stage CNF pipeline (start isolation, ε-elimination, unit removal, useless pruning, binarization) and GNF transformation with left-recursion elimination.
                 </p>
             </div>
-            <div style="margin-top:14px;">
+            <div style="margin-top:14px; margin-bottom:12px;">
                 <span class="badge-tag badge-term">6-Stage CNF</span>
                 <span class="badge-tag badge-term">GNF Left-Rec</span>
                 <span class="badge-tag badge-pill">Validated</span>
             </div>
         </div>
         """, unsafe_allow_html=True)
+        if st.button("🔄 Open Normal Forms →", key="home_nav_cnf", use_container_width=True):
+            st.session_state.nav_page = "4. CNF Conversion"
+            st.rerun()
 
     with col2:
         st.markdown("""
@@ -117,13 +123,16 @@ def render_home_page():
                     Execute the Cocke–Younger–Kasami algorithm. Inspect the triangular DP table, check cell partitions, and view exact binary/terminal rule derivations.
                 </p>
             </div>
-            <div style="margin-top:14px;">
+            <div style="margin-top:14px; margin-bottom:12px;">
                 <span class="badge-tag badge-var">O(n³·|P|) Matrix</span>
                 <span class="badge-tag badge-var">Cell Inspector</span>
                 <span class="badge-tag badge-pill">Backpointers</span>
             </div>
         </div>
         """, unsafe_allow_html=True)
+        if st.button("📊 Open CYK Tester →", key="home_nav_cyk", use_container_width=True):
+            st.session_state.nav_page = "6. CYK Membership Tester"
+            st.rerun()
 
         st.markdown("<br>", unsafe_allow_html=True)
 
@@ -136,13 +145,16 @@ def render_home_page():
                     Interactive 7-tuple PDA stepper with Next, Prev, Reset, and Run All controls. Features an animated-style LIFO stack visualizer and tape-reading ribbon.
                 </p>
             </div>
-            <div style="margin-top:14px;">
+            <div style="margin-top:14px; margin-bottom:12px;">
                 <span class="badge-tag badge-start">Interactive Stack</span>
                 <span class="badge-tag badge-start">Tape Ribbon</span>
                 <span class="badge-tag badge-pill">Non-Det BFS</span>
             </div>
         </div>
         """, unsafe_allow_html=True)
+        if st.button("🥞 Open PDA Simulator →", key="home_nav_pda", use_container_width=True):
+            st.session_state.nav_page = "7. PDA Simulator"
+            st.rerun()
 
     with col3:
         st.markdown("""
@@ -154,13 +166,16 @@ def render_home_page():
                     Generate Graphviz parse trees with non-terminal ellipses and terminal leave boxes. Inspect directed PDA state diagrams with real-time active state highlighting.
                 </p>
             </div>
-            <div style="margin-top:14px;">
+            <div style="margin-top:14px; margin-bottom:12px;">
                 <span class="badge-tag badge-var">Graphviz DOT</span>
                 <span class="badge-tag badge-var">State Machine</span>
                 <span class="badge-tag badge-pill">Active Highlight</span>
             </div>
         </div>
         """, unsafe_allow_html=True)
+        if st.button("🌳 Open Visualizations →", key="home_nav_vis", use_container_width=True):
+            st.session_state.nav_page = "8. Parse Tree Visualization"
+            st.rerun()
 
         st.markdown("<br>", unsafe_allow_html=True)
 
@@ -173,13 +188,16 @@ def render_home_page():
                     Built-in automated test suite runner covering CFG validation, derivations, CNF/GNF transformations, CYK parsing, and PDA acceptance/rejection test cases.
                 </p>
             </div>
-            <div style="margin-top:14px;">
+            <div style="margin-top:14px; margin-bottom:12px;">
                 <span class="badge-tag badge-term">24 Pytest Cases</span>
                 <span class="badge-tag badge-term">Pass/Fail Matrix</span>
                 <span class="badge-tag badge-pill">100% Passed</span>
             </div>
         </div>
         """, unsafe_allow_html=True)
+        if st.button("🧪 Run Test Suite →", key="home_nav_tests", use_container_width=True):
+            st.session_state.nav_page = "10. Test Cases and Results"
+            st.rerun()
 
     st.divider()
 
