@@ -545,6 +545,15 @@ a.anchor-link,
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     display: none !important;
 }
+
+/* Hide Streamlit Deploy Button and Header Toolbar Actions */
+.stDeployButton,
+[data-testid="stDeployButton"],
+[data-testid="stToolbarActions"],
+button[title="Deploy this app"],
+header[data-testid="stHeader"] button[title="Deploy this app"] {
+    display: none !important;
+}
 </style>
 """
 
