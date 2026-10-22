@@ -17,12 +17,6 @@ def render_home_page():
             A comprehensive, mathematically rigorous workbench designed for computer engineering students.
             Explore Context-Free Grammars, Pushdown Automata, Chomsky & Greibach Normal Forms, and dynamic programming parsing step by step.
         </div>
-        <div style="margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap;">
-            <span class="badge-tag" style="background: rgba(255,255,255,0.15); color: #ffffff; border: 1px solid rgba(255,255,255,0.25);">⚡ 100% Offline Python Engine</span>
-            <span class="badge-tag" style="background: rgba(16,185,129,0.2); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.4);">✓ 24/24 Automated Tests Passed</span>
-            <span class="badge-tag" style="background: rgba(56,189,248,0.2); color: #7dd3fc; border: 1px solid rgba(56,189,248,0.4);">📊 O(n³·|P|) CYK Dynamic Programming</span>
-            <span class="badge-tag" style="background: rgba(245,158,11,0.2); color: #fde68a; border: 1px solid rgba(245,158,11,0.4);">🥞 Non-Deterministic PDA Stepper</span>
-        </div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -88,7 +82,7 @@ def render_home_page():
         </div>
         """, unsafe_allow_html=True)
         if st.button("🚀 Open CFG Explorer →", key="home_nav_cfg", use_container_width=True):
-            st.session_state.nav_page = "2. CFG Explorer"
+            st.session_state.nav_selection = "2. CFG Explorer"
             st.rerun()
 
         st.markdown("<br>", unsafe_allow_html=True)
@@ -110,7 +104,7 @@ def render_home_page():
         </div>
         """, unsafe_allow_html=True)
         if st.button("🔄 Open Normal Forms →", key="home_nav_cnf", use_container_width=True):
-            st.session_state.nav_page = "4. CNF Conversion"
+            st.session_state.nav_selection = "4. CNF Conversion"
             st.rerun()
 
     with col2:
@@ -131,7 +125,7 @@ def render_home_page():
         </div>
         """, unsafe_allow_html=True)
         if st.button("📊 Open CYK Tester →", key="home_nav_cyk", use_container_width=True):
-            st.session_state.nav_page = "6. CYK Membership Tester"
+            st.session_state.nav_selection = "6. CYK Membership Tester"
             st.rerun()
 
         st.markdown("<br>", unsafe_allow_html=True)
@@ -153,7 +147,7 @@ def render_home_page():
         </div>
         """, unsafe_allow_html=True)
         if st.button("🥞 Open PDA Simulator →", key="home_nav_pda", use_container_width=True):
-            st.session_state.nav_page = "7. PDA Simulator"
+            st.session_state.nav_selection = "7. PDA Simulator"
             st.rerun()
 
     with col3:
@@ -174,7 +168,7 @@ def render_home_page():
         </div>
         """, unsafe_allow_html=True)
         if st.button("🌳 Open Visualizations →", key="home_nav_vis", use_container_width=True):
-            st.session_state.nav_page = "8. Parse Tree Visualization"
+            st.session_state.nav_selection = "8. Parse Tree Visualization"
             st.rerun()
 
         st.markdown("<br>", unsafe_allow_html=True)
@@ -196,7 +190,7 @@ def render_home_page():
         </div>
         """, unsafe_allow_html=True)
         if st.button("🧪 Run Test Suite →", key="home_nav_tests", use_container_width=True):
-            st.session_state.nav_page = "10. Test Cases and Results"
+            st.session_state.nav_selection = "10. Test Cases and Results"
             st.rerun()
 
     st.divider()
